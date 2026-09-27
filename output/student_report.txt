@@ -1,0 +1,18 @@
+STUDENT DATA AUTOMATION REPORT
+========================================
+
+Total Students: 10
+Average Marks: 79.00
+Highest Marks: 94
+Lowest Marks: 58
+Average Attendance: 84.50%
+
+Students by Department:
+CSE: 4
+ECE: 3
+IT: 3
+
+Students Needing Attention:
+ Name  Marks  Attendance
+  Ali     65          70
+Rohan     58          68
