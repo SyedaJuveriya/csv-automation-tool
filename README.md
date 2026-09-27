@@ -1,160 +1,175 @@
-# CSV Data Processing and Automated Report Generator
+# Student CSV Automation Tool
 
-## Project Description
+A Python-based automation tool that processes student data from CSV files, performs data cleaning and validation, analyzes academic performance, and automatically generates reports.
 
-This project is a Python automation tool that processes student data stored in a CSV file.
+This project was developed as part of the **GIST Internship – Python Development Track, Task 2 (Intermediate Level)**.
 
-The tool automatically reads, cleans, analyzes, and generates a report from the CSV data.
+## 📌 Project Overview
 
-## Features
+The Student CSV Automation Tool reduces manual work involved in processing student records.
 
-- Reads student data from a CSV file
-- Checks whether the input file exists
-- Validates required columns
-- Checks for missing values
-- Cleans text and numerical data
-- Calculates average, highest, and lowest marks
-- Calculates average attendance
-- Groups students by department
-- Identifies students who need attention
-- Generates an automated text report
-- Saves cleaned data as a new CSV file
-- Handles common input and data errors
+It takes a CSV file containing student information, validates and cleans the data, calculates grades, analyzes student performance, and generates multiple output reports automatically.
 
-## Technologies Used
+## ✨ Features
+
+- CSV file loading and processing
+- Data cleaning and validation
+- Duplicate and data-quality checks
+- Numeric validation for student records
+- Automatic grade calculation
+- Average marks and attendance analysis
+- Department-wise statistics
+- Top performer identification
+- Students needing attention identification
+- Configurable performance thresholds
+- Cleaned CSV generation
+- Automated TXT report generation
+- Styled HTML report generation
+- Visual charts and summary cards in the HTML report
+
+## 🛠️ Technologies Used
 
 - Python
 - Pandas
 - CSV
-- File Handling
+- HTML
+- CSS
 
-## Project Structure
+## 📂 Project Structure
 
 ```text
-CSV-Automation-Tool/
+csv_automation_tool/
+│
+├── main.py
 │
 ├── input/
 │   └── students.csv
 │
 ├── output/
 │   ├── cleaned_students.csv
+│   ├── student_report.html
 │   └── student_report.txt
 │
-├── src/
-│   ├── __init__.py
-│   └── main.py
-│
-├── venv/
-├── .gitignore
-├── README.md
-└── requirements.txt
+└── README.md
+````
+
+## 📊 Input Data
+
+The input CSV file should contain the following columns:
+
+* Name
+* Age
+* Department
+* Marks
+* Attendance
+
+Example:
+
+```text
+Name,Age,Department,Marks,Attendance
+Aisha,20,CSE,85,92
+Rahul,21,AI&DS,72,81
+Sara,20,ECE,58,68
 ```
 
-## Input
+## ⚙️ How It Works
 
-The program accepts a CSV file containing student information.
+The application follows these steps:
 
-Required columns:
+1. Loads the student CSV file.
+2. Validates the required columns and data.
+3. Cleans student information.
+4. Checks for invalid or missing numeric values.
+5. Detects duplicate records.
+6. Calculates grades based on marks.
+7. Analyzes marks and attendance.
+8. Identifies top-performing students.
+9. Identifies students who need attention.
+10. Generates cleaned data and automated reports.
 
-- Name
-- Age
-- Department
-- Marks
-- Attendance
+## 🚀 How to Run
 
-## Output
+### 1. Clone the repository
 
-The program generates:
-
-1. `cleaned_students.csv` — cleaned student data
-2. `student_report.txt` — automated analysis report
-
-## Installation
-
-### 1. Clone or download the project
-
-Download this project to your computer and open the project folder in VS Code.
-
-### 2. Create a virtual environment
-
-Open the terminal inside the project folder and run:
-
-```powershell
-python -m venv venv
+```bash
+git clone https://github.com/SyedaJuveriya/csv-automation-tool.git
+cd csv-automation-tool
 ```
 
-### 3. Activate the virtual environment
+### 2. Install the required library
 
-For Windows PowerShell:
-
-```powershell
-.\venv\Scripts\Activate.ps1
+```bash
+pip install pandas
 ```
 
-### 4. Install required libraries
+### 3. Add the input CSV
 
-```powershell
-pip install -r requirements.txt
-```
-
-## How to Run
-
-Make sure the virtual environment is activated.
-
-Run the following command from the project folder:
-
-```powershell
-python src/main.py
-```
-
-The program will read:
+Place your CSV file inside:
 
 ```text
 input/students.csv
 ```
 
-and automatically generate:
+### 4. Run the application
 
-```text
-output/cleaned_students.csv
-output/student_report.txt
+```bash
+python main.py
 ```
 
-## Error Handling
+### 5. Check the generated reports
 
-The program handles common errors such as:
+After execution, the following files are generated inside the `output` folder:
 
-- Missing input CSV file
-- Empty CSV file
-- Missing required columns
-- Invalid marks or attendance values
-- Unable to read the CSV file
-## Testing
+```text
+cleaned_students.csv
+student_report.txt
+student_report.html
+```
 
-The project was tested using different input conditions:
+## 📄 Generated Reports
 
-| Test Case | Expected Result |
-|---|---|
-| Valid CSV file | Data is processed successfully |
-| Missing CSV file | Error message is displayed |
-| Empty CSV file | Error message is displayed |
-| Invalid Marks or Attendance | Error message is displayed |
-| Missing required column | Error message is displayed |
+### Cleaned CSV
 
-## Future Improvements
+Contains the processed and cleaned student records.
 
-The project can be improved in the future by adding:
+### Text Report
 
-- Graphs and charts for data visualization
-- Excel file support
-- PDF report generation
-- A graphical user interface
-- Automatic email report delivery
-- More advanced data validation
-## Author
+Provides a simple summary of the analyzed student data.
 
-Alff
+### HTML Report
 
-## Project Type
+Provides a visually formatted report containing:
 
-Python Automation Project
+* Student statistics
+* Data quality summary
+* Grade distribution
+* Department statistics
+* Top performers
+* Students needing attention
+* Performance charts
+
+## 🎯 Project Level
+
+**GIST Internship – Python Development**
+
+**Task 2: Intermediate Python Automation Tool**
+
+## 🎓 Learning Outcomes
+
+Through this project, I practiced:
+
+* Python automation
+* Pandas data processing
+* CSV handling
+* Data validation and cleaning
+* Statistical analysis
+* Report generation
+* HTML/CSS presentation
+* File handling
+* Building a complete data-processing workflow
+
+## 👩‍💻 Author
+
+**Syeda Juveriya**
+
+B.Tech – Artificial Intelligence & Data Science
