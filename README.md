@@ -40,7 +40,9 @@ It takes a CSV file containing student information, validates and cleans the dat
 ```text
 csv_automation_tool/
 │
-├── main.py
+├── .gitignore
+├── README.md
+├── requirements.txt
 │
 ├── input/
 │   └── students.csv
@@ -50,7 +52,9 @@ csv_automation_tool/
 │   ├── student_report.html
 │   └── student_report.txt
 │
-└── README.md
+└── src/
+    ├── main.py
+    └── __init__.py
 ````
 
 ## 📊 Input Data
@@ -113,7 +117,7 @@ input/students.csv
 ### 4. Run the application
 
 ```bash
-python main.py
+python src/main.py
 ```
 
 ### 5. Check the generated reports
